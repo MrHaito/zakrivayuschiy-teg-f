@@ -1,0 +1,39 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Привет!'",
+    "check": "prettier --check \"**/*.{html,css,js}\"",
+    "format": "prettier --write \"**/*.{html,css,js}\"",
+    "lint": "stylelint \"**/*.css\"",
+    "lintfix": "stylelint \"**/*.css\" --fix",
+    "checkAll": "npm run check && npm run lint",
+    "fixAll": "npm run format && npm run lintfix",
+    "build": "gulp build",
+    "dev": "gulp watchapp",
+    "fixAndBuild": "npm run fixAll && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.4",
+    "cssnano": "^7.0.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-replace": "^1.1.4",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.5.4",
+    "postcss-combine-media-query": "^2.0.0",
+    "prettier": "^2.8.0",
+    "stylelint": "^14.15.0"
+  },
+  "browserslist": [
+    "last 5 versions"
+  ]
+}
